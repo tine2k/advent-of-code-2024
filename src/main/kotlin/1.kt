@@ -25,7 +25,7 @@ fun main() {
         val countList = secondList.groupBy { it }.mapValues { it.value.size  }
         return firstList.sumOf { value -> value * (countList[value] ?: 0) }.toLong()
     }
-    
+
     header(1)
     test(::solve1, testInput, 11)
     solve(::solve1)
