@@ -83,4 +83,6 @@ enum class Direction {
     NORTH, SOUTH, WEST, EAST
 }
 
-data class Point(val x: Int, val y: Int)
+data class Point(val x: Int, val y: Int) {
+    operator fun plus(p2: Point): Point = Point(this.x + p2.x, this.y + p2.y)
+}
